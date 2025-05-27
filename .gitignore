@@ -32,9 +32,10 @@ ENV/
 *.swo
 
 # Project specific
-models/
-logs/
-data/
+# Allow directory structures but ignore specific files
+# models/
+# logs/
+# data/
 *.pth
 *.ckpt
 *.pt
