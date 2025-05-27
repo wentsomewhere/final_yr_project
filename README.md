@@ -1,6 +1,42 @@
-# Text Image Super-Resolution using SRRGAN
+# SRRGAN - Super Resolution GAN
 
-This project implements a Super-Resolution GAN (SRRGAN) model specifically designed for text images. The model combines the power of GANs with OCR-specific loss functions to enhance the quality of low-resolution text images.
+This project implements a Super Resolution GAN (SRRGAN) for enhancing image quality and text readability.
+
+## Setup
+
+1. Clone the repository:
+```bash
+git clone https://github.com/YOUR_USERNAME/final_yr_project.git
+cd final_yr_project
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+## Training
+
+To train the model:
+```bash
+python scripts/train.py --data_dir data --models_dir models --log_dir logs --batch_size 16
+```
+
+## Project Structure
+
+- `src/`: Source code
+  - `models/`: Model architectures
+  - `utils/`: Utility functions
+- `scripts/`: Training and evaluation scripts
+- `data/`: Dataset directory
+- `models/`: Saved model checkpoints
+- `logs/`: Training logs
+
+## Requirements
+
+- Python 3.8+
+- PyTorch 2.0+
+- CUDA-capable GPU (recommended)
 
 ## Features
 
@@ -25,41 +61,6 @@ final_yr_project/
 │   └── utils/        # Utility functions
 └── train_srrgan.ipynb # Google Colab training notebook
 ```
-
-## Setup
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/final_yr_project.git
-cd final_yr_project
-```
-
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-## Training
-
-### Local Training
-```bash
-python scripts/train.py --data_dir data --models_dir models --log_dir logs
-```
-
-### Google Colab Training
-1. Open `train_srrgan.ipynb` in Google Colab
-2. Follow the notebook instructions to upload your dataset and start training
-
-## Model Architecture
-
-- Generator: Residual Dense Blocks with attention mechanism
-- Discriminator: Convolutional network with LeakyReLU
-- OCR Model: CRNN for text recognition
-- Feature Extractor: VGG19 for perceptual loss
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🌟 Features
 
